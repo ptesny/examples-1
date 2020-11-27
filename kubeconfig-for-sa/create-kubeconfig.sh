@@ -5,7 +5,9 @@ NAMESPACE=${2:-default}
 
 
 # API server URL is api.KYMA_CLUSTER_DOMAIN
-API_SERVER_URL="https://api.$(kubectl config current-context)"
+### API_SERVER_URL="https://api.$(kubectl config current-context)"
+API_SERVER_URL="https://api.c-51c3884.kyma.shoot.live.k8s-hana.ondemand.com"
+
 
 # the name of the secret containing the service account token goes here
 SECRET_NAME=$(kubectl get sa -n ${NAMESPACE} ${SA} -ojsonpath='{.secrets[0].name}')
